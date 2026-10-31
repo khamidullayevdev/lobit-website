@@ -6,7 +6,7 @@ import { Moon, Sun } from "lucide-react";
 export const THEME_KEY = "lobit-theme";
 
 /** Runs before paint (inlined in <head>) so the page never flashes the wrong theme. */
-export const themeInitScript = `(function(){try{var t=localStorage.getItem('${THEME_KEY}');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
+export const themeInitScript = `(function(){try{if(localStorage.getItem('${THEME_KEY}')==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`;
 
 export function ThemeToggle({ className = "" }: { className?: string }) {
   const [dark, setDark] = useState(false);

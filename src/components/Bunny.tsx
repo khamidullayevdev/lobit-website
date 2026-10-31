@@ -51,7 +51,7 @@ export function BunnyHead({ mood = "happy", eyes = "normal", alive = true }: Hea
 
       {/* Eyes */}
       {eyes === "hearts" ? (
-        <g fill="#ff4d6d">
+        <g fill="#701F35">
           <path d="M76 154 L63 140 A7 7 0 0 1 76 131 A7 7 0 0 1 89 140 Z" />
           <path d="M124 154 L111 140 A7 7 0 0 1 124 131 A7 7 0 0 1 137 140 Z" />
         </g>

@@ -49,7 +49,7 @@ export function Waitlist() {
             </p>
           ) : (
             <form
-              className="mx-auto mt-9 flex max-w-md flex-col gap-2 rounded-full bg-white/[0.06] p-1.5 ring-1 ring-white/10 backdrop-blur-sm sm:flex-row"
+              className="mx-auto mt-9 flex max-w-md flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-2 sm:rounded-full sm:bg-white/[0.06] sm:p-1.5 sm:ring-1 sm:ring-white/10 sm:backdrop-blur-sm"
               onSubmit={(e) => {
                 e.preventDefault();
                 // TODO: save the email with a Convex mutation once the backend exists.
@@ -66,9 +66,12 @@ export function Waitlist() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="h-11 flex-1 rounded-full border-2 border-transparent bg-white px-4 text-ink placeholder:text-[#6b6478] focus:border-sun focus:outline-none"
+                className="h-14 w-full rounded-full border-2 border-transparent bg-white px-5 text-base text-ink placeholder:text-[#6b6478] focus:border-sun focus:outline-none sm:h-12 sm:flex-1"
               />
-              <button type="submit" className="btn btn-primary h-11">
+              <button
+                type="submit"
+                className="flex h-10 w-full shrink-0 items-center justify-center gap-1.5 self-center rounded-full bg-carrot px-5 text-sm font-semibold text-white shadow-[0_3px_0_var(--color-carrot-dark)] transition-[background-color,transform,box-shadow] duration-150 hover:bg-[#ff7a40] active:translate-y-[3px] active:shadow-none sm:w-auto"
+              >
                 Join <ArrowRight className="h-4 w-4" strokeWidth={3} />
               </button>
             </form>

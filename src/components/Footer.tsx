@@ -99,7 +99,7 @@ function StoreBadge({ store }: { store: string }) {
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative overflow-hidden bg-carrot text-white dark:bg-[#8f350d]">
+    <footer className="relative overflow-hidden bg-carrot text-white">
       <div className="container-x relative grid gap-12 pt-20 md:pt-28 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
           <a href="#" className="inline-flex items-center gap-2.5" aria-label="Lobit home">
