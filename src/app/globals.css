@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme values that change between light and dark mode */
+:root {
+  --fg: #16131f;
+  --muted: #6b6577;
+  --line: #ece7e1;
+  --surface: #ffffff;
+  --cream: #fff7ee;
+  --carrot-soft: #ffe3d3;
+  --plum-soft: #ebe6ff;
+  --sky-soft: #ddf4ff;
+  --sun-soft: #fff4d6;
+  --mint-soft: #dcf7ec;
+
+  /* Page backgrounds the scroll animation moves between */
+  --bg-base: #f5f4f0;
+  --bg-sky: #e3f5ff;
+  --bg-orange: #ff7a3d;
+  --bg-plum: #eeeaff;
+  --bg-sun: #fff3d1;
+  --bg-mint: #ddf6ec;
+}
+
+.dark {
+  color-scheme: dark;
+  --fg: #f3f0fa;
+  --muted: #a6a0b4;
+  --line: #2e2a3a;
+  --surface: #1c1926;
+  --cream: #24202f;
+  --carrot-soft: #3d241a;
+  --plum-soft: #2a2350;
+  --sky-soft: #15303f;
+  --sun-soft: #3a3016;
+  --mint-soft: #14352a;
+
+  --bg-base: #110f18;
+  --bg-sky: #0e1d27;
+  --bg-orange: #b4420f;
+  --bg-plum: #1a1530;
+  --bg-sun: #231d0e;
+  --bg-mint: #0d221b;
+}
+
+@theme inline {
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-cream: var(--cream);
+  --color-carrot-soft: var(--carrot-soft);
+  --color-plum-soft: var(--plum-soft);
+  --color-sky-soft: var(--sky-soft);
+  --color-sun-soft: var(--sun-soft);
+  --color-mint-soft: var(--mint-soft);
+
+  --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@theme {
+  --color-ink: #16131f;
+  --color-carrot: #ff6a2b;
+  --color-carrot-dark: #d9501a;
+  --color-plum: #5b3df5;
+  --color-plum-dark: #4027c9;
+  --color-sky: #1fb6ff;
+  --color-sun: #ffc93c;
+  --color-mint: #1fbf86;
+  --color-berry: #ff4d6d;
+
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-ear-left: ear-left 3.2s ease-in-out infinite;
+  --animate-ear-right: ear-right 3.2s ease-in-out infinite;
+  --animate-blink: blink 4.5s infinite;
+  --animate-pushup: pushup 1.6s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes ear-left {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-8deg); }
+  }
+  @keyframes ear-right {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(8deg); }
+  }
+  @keyframes blink {
+    0%, 92%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+  }
+  @keyframes pushup {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(16px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--page-bg, var(--bg-base));
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 700ms cubic-bezier(0.22, 1, 0.36, 1), color 300ms ease;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-x { padding-inline: 2rem; }
+}
+
+/* Compact, pressable buttons. Less bottom padding offsets the 3px "ledge" so they don't look tall. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.62rem 1.15rem 0.55rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 150ms ease;
+  will-change: transform;
+}
+.btn:active {
+  transform: translateY(3px);
+}
+.btn-primary {
+  background: var(--color-carrot);
+  color: #fff;
+  box-shadow: 0 3px 0 var(--color-carrot-dark);
+}
+.btn-primary:hover { background: #ff7a40; }
+.btn-primary:active { box-shadow: 0 0 0 var(--color-carrot-dark); }
+.btn-ghost {
+  background: var(--surface);
+  color: var(--color-plum);
+  border: 2px solid var(--line);
+  box-shadow: 0 3px 0 var(--line);
+  padding: 0.5rem 1rem 0.4rem;
+}
+.dark .btn-ghost { color: #b9a9ff; }
+.btn-ghost:hover { background: var(--cream); }
+.btn-ghost:active { box-shadow: 0 0 0 var(--line); }
+
+.card {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 0 var(--line);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Splash: pure CSS so content is never trapped behind it without JS */
+.splash {
+  animation: splash-out 650ms ease forwards;
+  animation-delay: 1100ms;
+}
+@keyframes splash-out {
+  from { opacity: 1; visibility: visible; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body { transition: none; }
+  .splash { animation-duration: 1ms; animation-delay: 200ms; }
+  *, *::before, *::after {
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---------- Page frame: hatched side rails and grid, used behind the hero ---------- */
+:root {
+  --rail-line: rgba(22, 19, 31, 0.08);
+  --rail-hatch: rgba(22, 19, 31, 0.07);
+  --grid-line: rgba(22, 19, 31, 0.055);
+  --glow: rgba(255, 106, 43, 0.16);
+  --ghost: rgba(22, 19, 31, 0.5);
+}
+.dark {
+  --rail-line: rgba(255, 255, 255, 0.07);
+  --rail-hatch: rgba(255, 255, 255, 0.06);
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --glow: rgba(255, 106, 43, 0.13);
+  --ghost: rgba(255, 255, 255, 0.55);
+}
+
+.rail {
+  border-inline: 1px solid var(--rail-line);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--rail-hatch) 0 1px,
+    transparent 1px 9px
+  );
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+}
+
+.glow {
+  background: radial-gradient(closest-side, var(--glow), transparent);
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: -24; }
+}
+.animate-dash {
+  animation: dash 1.2s linear infinite;
+}
+
+/* ---------- Typography: tight, confident headings instead of chunky rounded ones ---------- */
+h1, h2, h3 {
+  letter-spacing: -0.035em;
+}
+.font-display.font-extrabold,
+h1.font-extrabold, h2.font-extrabold {
+  font-weight: 650;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+:root { --ribbon: #ff7d45; }
+.dark { --ribbon: #a8400f; }
+
+/* Dotted texture for the stages behind product mockups */
+:root { --dot: rgba(18, 17, 16, 0.09); }
+.dark { --dot: rgba(255, 255, 255, 0.07); }
+.bg-dots {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1.4px);
+  background-size: 18px 18px;
+}
+
+/* Footer wordmark: trim the line box to the letters so they sit exactly on the bottom edge. */
+.wordmark {
+  text-box: trim-both cap alphabetic;
+}
