@@ -1,15 +1,15 @@
 export const faqs = [
   {
-    q: "Is Lobit free?",
+    q: "Is Lobbit free?",
     a: "Yes. Lobbies with friends are free. A premium plan will add bigger lobbies and extra modes.",
   },
   {
     q: "How do the stakes work?",
-    a: "Your lobby agrees on them before you start: dinner, a dare, a good deed or a prize for the winner. Lobit keeps score and tells everyone who has to pay up.",
+    a: "Your lobby agrees on them before you start: dinner, a dare, a good deed or a prize for the winner. Lobbit keeps score and tells everyone who has to pay up.",
   },
   {
-    q: "Does Lobit hold the money?",
-    a: "No. Lobit never takes or holds money. Any prize pool is between you and your friends.",
+    q: "Does Lobbit hold the money?",
+    a: "No. Lobbit never takes or holds money. Any prize pool is between you and your friends.",
   },
   {
     q: "How does the camera know a rep is real?",

@@ -19,7 +19,7 @@ export function Splash() {
       onAnimationEnd={(e) => {
         if (e.animationName === "splash-out") {
           setGone(true);
-          window.dispatchEvent(new Event("lobit:ready"));
+          window.dispatchEvent(new Event("lobbit:ready"));
         }
       }}
     >
@@ -28,7 +28,7 @@ export function Splash() {
           <Bunny className="h-28 w-28" />
         </div>
         <span className="font-display text-4xl font-extrabold tracking-tight text-carrot">
-          lobit
+          lobbit
         </span>
       </div>
     </div>

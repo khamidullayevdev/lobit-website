@@ -5,7 +5,7 @@ import { Plus } from "lucide-react";
 import { faqs } from "@/lib/faqs";
 import { Mascot } from "./Mascot";
 
-const CONTACT = "hello@lobit.co";
+const CONTACT = "hello@lobbit.co";
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);

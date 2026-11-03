@@ -31,7 +31,7 @@ const cols = [
     title: "Company",
     links: [
       ["About", "#"],
-      ["Contact", "mailto:hello@lobit.co"],
+      ["Contact", "mailto:hello@lobbit.co"],
       ["Privacy", "#"],
       ["Terms", "#"],
     ],
@@ -102,11 +102,11 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-carrot text-white">
       <div className="container-x relative grid gap-12 pt-20 md:pt-28 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <a href="#" className="inline-flex items-center gap-2.5" aria-label="Lobit home">
+          <a href="#" className="inline-flex items-center gap-2.5" aria-label="Lobbit home">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white">
               <Bunny className="h-9 w-9" alive={false} />
             </span>
-            <span className="font-display text-[1.9rem] font-extrabold leading-none tracking-tight">lobit</span>
+            <span className="font-display text-[1.9rem] font-extrabold leading-none tracking-tight">lobbit</span>
           </a>
           <p className="mt-5 max-w-sm font-display text-xl font-bold leading-snug">
             Miss your reps. Pay the price.
@@ -122,7 +122,7 @@ export function Footer() {
               <li key={s.name}>
                 <a
                   href={s.href}
-                  aria-label={`Lobit on ${s.name}`}
+                  aria-label={`Lobbit on ${s.name}`}
                   className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25 transition-colors duration-200 hover:bg-white hover:text-carrot"
                 >
                   <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden>
@@ -153,9 +153,9 @@ export function Footer() {
       </div>
 
       <div className="container-x relative mt-20 flex flex-col gap-2 border-t border-white/20 pt-6 text-sm text-white/75 md:flex-row md:justify-between">
-        <p>© {year} Lobit. All rights reserved.</p>
+        <p>© {year} Lobbit. All rights reserved.</p>
         <p className="max-w-xl md:text-right">
-          Lobit is not a medical service. Check with a doctor before starting a new exercise routine.
+          Lobbit is not a medical service. Check with a doctor before starting a new exercise routine.
         </p>
       </div>
 
@@ -164,7 +164,7 @@ export function Footer() {
         aria-hidden
         className="wordmark pointer-events-none mt-10 select-none text-center text-[29vw] font-bold leading-none tracking-[-0.06em] text-white/15 lg:text-[21rem]"
       >
-        lobit
+        lobbit
       </p>
     </footer>
   );

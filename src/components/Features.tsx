@@ -163,7 +163,7 @@ export function Features() {
               </p>
               <Points dark items={["Push-ups, pull-ups, squats", "Half reps don't count", "Any phone works"]} />
             </div>
-            <YouTube id={VIDEO_ID} title="How Lobit counts your reps" />
+            <YouTube id={VIDEO_ID} title="How Lobbit counts your reps" />
           </article>
         </div>
       </div>

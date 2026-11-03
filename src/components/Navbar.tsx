@@ -29,9 +29,9 @@ export function Navbar() {
           scrolled ? "shadow-[0_12px_32px_-12px_rgba(22,19,31,0.45)]" : ""
         }`}
       >
-        <a href="#top" aria-label="Lobit home" className="flex items-center gap-2">
+        <a href="#top" aria-label="Lobbit home" className="flex items-center gap-2">
           <Bunny className="h-8 w-8" alive={false} />
-          <span className="text-[1.35rem] font-bold leading-none tracking-[-0.04em]">lobit</span>
+          <span className="text-[1.35rem] font-bold leading-none tracking-[-0.04em]">lobbit</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

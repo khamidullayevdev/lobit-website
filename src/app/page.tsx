@@ -16,7 +16,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Lobit",
+    name: "Lobbit",
     url: SITE_URL,
   },
   {

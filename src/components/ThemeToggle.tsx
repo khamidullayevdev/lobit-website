@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
-export const THEME_KEY = "lobit-theme";
+export const THEME_KEY = "lobbit-theme";
 
 /** Runs before paint (inlined in <head>) so the page never flashes the wrong theme. */
 export const themeInitScript = `(function(){try{if(localStorage.getItem('${THEME_KEY}')==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`;

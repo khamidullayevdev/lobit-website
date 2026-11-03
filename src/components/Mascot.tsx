@@ -17,13 +17,13 @@ function Paw({ x, y }: { x: number; y: number }) {
 }
 
 /**
- * Full-body Lobit bunny for section headers. Drawn in a 200×260 box.
+ * Full-body Lobbit bunny for section headers. Drawn in a 200×260 box.
  * The body is drawn first and the head sits on top of it, so the two always read as one character.
  */
 export function Mascot({ pose = "wave", className }: { pose?: Pose; className?: string }) {
   const sideArms = pose === "medal" || pose === "hearts";
   return (
-    <svg viewBox="0 0 200 260" className={className} role="img" aria-label="Lobit bunny">
+    <svg viewBox="0 0 200 260" className={className} role="img" aria-label="Lobbit bunny">
       {/* feet */}
       <ellipse cx="72" cy="248" rx="23" ry="11" fill={SHADE} />
       <ellipse cx="128" cy="248" rx="23" ry="11" fill={SHADE} />
@@ -42,7 +42,7 @@ export function Mascot({ pose = "wave", className }: { pose?: Pose; className?: 
       {sideArms && <ellipse cx="160" cy="202" rx="13" ry="23" fill={SHADE} transform="rotate(-22 160 202)" />}
       {pose === "wave" && (
         <g>
-          <ellipse cx="166" cy="150" rx="13" ry="26" fill={SHADE} transform="rotate(-28 166 150)" />
+          <ellipse cx="166" cy="150" rx="13" ry="26" fill={SHADE} transform="rotate(24 166 150)" />
           <circle cx="176" cy="128" r="14" fill={ORANGE} />
         </g>
       )}

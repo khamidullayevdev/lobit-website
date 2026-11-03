@@ -17,15 +17,15 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lobit: fitness challenges with friends. Loser pays up.",
-    template: "%s · Lobit",
+    default: "Lobbit: fitness challenges with friends. Loser pays up.",
+    template: "%s · Lobbit",
   },
   description,
-  applicationName: "Lobit",
+  applicationName: "Lobbit",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    siteName: "Lobit",
+    siteName: "Lobbit",
     url: "/",
     title: "Miss your reps. Pay the price.",
     description,

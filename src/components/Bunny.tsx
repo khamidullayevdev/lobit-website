@@ -74,6 +74,9 @@ export function BunnyHead({ mood = "happy", eyes = "normal", alive = true }: Hea
       {/* Muzzle, nose, mouth, teeth */}
       <ellipse cx="100" cy="167" rx="25" ry="18" fill="#ffe3d3" />
       <path d="M92 156 Q100 151 108 156 Q104 163 100 164 Q96 163 92 156Z" fill="#16131f" />
+      {/* Teeth sit below the mouth curve so the curve reads as the moustache in front of them. */}
+      <rect x="94" y="176" width="5.5" height="7" rx="1.5" fill="#fff" />
+      <rect x="100.5" y="176" width="5.5" height="7" rx="1.5" fill="#fff" />
       <path
         d="M100 164 V170 M100 170 Q93 177 87 172 M100 170 Q107 177 113 172"
         stroke="#16131f"
@@ -81,16 +84,14 @@ export function BunnyHead({ mood = "happy", eyes = "normal", alive = true }: Hea
         fill="none"
         strokeLinecap="round"
       />
-      <rect x="94" y="173" width="5.5" height="8" rx="1.5" fill="#fff" />
-      <rect x="100.5" y="173" width="5.5" height="8" rx="1.5" fill="#fff" />
     </g>
   );
 }
 
-/** Lobit's mascot head: an orange bunny in a sweatband. Drawn in code so it stays crisp at any size. */
+/** Lobbit's mascot head: an orange bunny in a sweatband. Drawn in code so it stays crisp at any size. */
 export function Bunny({ className, ...head }: BunnyProps) {
   return (
-    <svg viewBox="0 0 200 210" className={className} role="img" aria-label="Lobit bunny">
+    <svg viewBox="0 0 200 210" className={className} role="img" aria-label="Lobbit bunny">
       <BunnyHead {...head} />
     </svg>
   );

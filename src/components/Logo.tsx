@@ -9,7 +9,7 @@ export function Logo({ light = false }: { light?: boolean }) {
           light ? "text-white" : "text-carrot"
         }`}
       >
-        lobit
+        lobbit
       </span>
     </span>
   );

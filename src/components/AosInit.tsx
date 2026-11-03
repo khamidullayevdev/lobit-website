@@ -18,10 +18,10 @@ export function AosInit() {
         disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
       });
     };
-    window.addEventListener("lobit:ready", start);
+    window.addEventListener("lobbit:ready", start);
     const fallback = window.setTimeout(start, 2000);
     return () => {
-      window.removeEventListener("lobit:ready", start);
+      window.removeEventListener("lobbit:ready", start);
       window.clearTimeout(fallback);
     };
   }, []);
