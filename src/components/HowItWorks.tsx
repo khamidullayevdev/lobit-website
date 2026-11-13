@@ -47,7 +47,7 @@ function Invite() {
         </span>
       </div>
       <span className="flex w-full items-center justify-between gap-2 rounded-full bg-surface py-1.5 pl-3.5 pr-1.5 shadow-[0_14px_30px_-16px_rgba(18,17,16,0.4)] ring-1 ring-line">
-        <span className="truncate font-mono text-xs text-muted">lobbit.co/j/x7Kp</span>
+        <span className="truncate font-mono text-xs text-muted">Invite code: x7Kp</span>
         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-plum text-white">
           <Copy className="h-3.5 w-3.5" />
         </span>

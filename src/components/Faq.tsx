@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { faqs } from "@/lib/faqs";
 import { Mascot } from "./Mascot";
+import { CONTACT_EMAIL } from "@/lib/site";
 
-const CONTACT = "hello@lobbit.co";
 
 export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
@@ -18,16 +18,18 @@ export function Faq() {
         <h2 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
           Frequently asked questions
         </h2>
-        <p className="mt-5 text-lg text-muted">
-          Can&apos;t find what you&apos;re looking for? Feel free to{" "}
-          <a
-            href={`mailto:${CONTACT}`}
-            className="font-semibold text-plum underline decoration-2 underline-offset-4 hover:text-carrot dark:text-[#b9a9ff]"
-          >
-            reach out to us
-          </a>
-          .
-        </p>
+        {CONTACT_EMAIL && (
+          <p className="mt-5 text-lg text-muted">
+            Can&apos;t find what you&apos;re looking for? Feel free to{" "}
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="font-semibold text-plum underline decoration-2 underline-offset-4 hover:text-carrot dark:text-[#b9a9ff]"
+            >
+              reach out to us
+            </a>
+            .
+          </p>
+        )}
       </div>
       <div className="space-y-3">
         {faqs.map((f, i) => {

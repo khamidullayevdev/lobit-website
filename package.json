@@ -1,5 +1,5 @@
 {
-  "name": "lobbit",
+  "name": "lobbit-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "convex": "^1.49.0",
     "lucide-react": "^1.65.0",
     "motion": "^14.9.0",
     "next": "15.5.28",

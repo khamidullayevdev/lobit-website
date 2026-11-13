@@ -1,4 +1,5 @@
 import { Smartphone } from "lucide-react";
+import { CONTACT_EMAIL } from "@/lib/site";
 import { Bunny } from "./Bunny";
 
 const cols = [
@@ -31,7 +32,7 @@ const cols = [
     title: "Company",
     links: [
       ["About", "#"],
-      ["Contact", "mailto:hello@lobbit.co"],
+      ...(CONTACT_EMAIL ? [["Contact", `mailto:${CONTACT_EMAIL}`]] : []),
       ["Privacy", "#"],
       ["Terms", "#"],
     ],
